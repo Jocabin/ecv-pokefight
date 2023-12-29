@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Trophee from '$lib/assets/trophee.png';
+
 	export let data;
 
 	const allPokemons = data.allPokemons;
@@ -6,6 +8,7 @@
 	$: selectedWarriors = [];
 	$: warriors = data.warriors;
 	$: fightUrl = selectedWarriors.length === 2 ? `/fight?uuid1=${selectedWarriors[0]}&uuid2=${selectedWarriors[1]}` : '/fight';
+	$: champion = data.warriors[0];
 
 	function selectWarrior(uuid: string) {
 		if (selectedWarriors.includes(uuid)) {
@@ -37,11 +40,15 @@
 									class="bg-gray-200 w-full rounded flex justify-start items-center p-2">
 						<img {src} alt="">
 						<span class="flex flex-col justify-start items-start">
-						<span class="uppercase font-bold">{warrior.name}</span>
-						<span>Pts: {warrior.points}</span>
-						<span>PV: {warrior.pv}</span>
-						<span>Atk: {warrior.force}</span>
+							<span class="uppercase font-bold">{warrior.name}</span>
+							<span>Pts: {warrior.points}</span>
+							<span>PV: {warrior.pv}</span>
+							<span>Atk: {warrior.force}</span>
 					</span>
+
+						{#if champion.uuid === warrior.uuid}
+							<img width="50" class="ml-auto" src={Trophee} alt="">
+						{/if}
 					</button>
 				</li>
 			{/each}
@@ -64,6 +71,6 @@
 
     .selectedWarrior {
         background-color: darkred;
-				color: white;
+        color: white;
     }
 </style>
