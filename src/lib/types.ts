@@ -14,3 +14,9 @@ export type BasePokemon = {
 		front_default: string;
 	};
 }
+
+export type MatchResults = {
+	winner: Warrior | undefined,
+	looser: Warrior | undefined,
+	draw: boolean
+}

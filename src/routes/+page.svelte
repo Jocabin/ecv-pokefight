@@ -24,10 +24,14 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Choisissez vos combatants</title>
+</svelte:head>
+
 <h1>Choisissez vos combatants</h1>
 
 <div class="flex flex-col items-stretch gap-8 justify-start mt-8">
-	<div class="h-[500px] border border-black p-4 rounded overflow-hidden">
+	<div class="h-[400px] border border-black p-4 rounded overflow-hidden">
 		<p class="italic font-bold mb-4">Max 2 combatants !</p>
 
 		<ul class="flex flex-col gap-6 justify-start items-stretch h-full overflow-auto pb-10">

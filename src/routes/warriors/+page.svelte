@@ -2,11 +2,14 @@
 	import PokemonCard from '$lib/components/PokemonCard.svelte';
 
 	export let data;
-	const allPokemons = data.allPokemons;
-
+	$: allPokemons = data.allPokemons;
 	$: warriors = data.warriors;
 	$: champion = data.warriors[0]
 </script>
+
+<svelte:head>
+	<title>Classement</title>
+</svelte:head>
 
 <h1>Classement des combatants</h1>
 

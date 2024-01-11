@@ -11,13 +11,13 @@ export const pokeGradients = {
 	'bug': 'background: linear-gradient(45deg, #2C8637 0%, #84C81F 100%);',
 	'normal': 'background: linear-gradient(45deg, #5B7490 0%, #BACFF0 100%);',
 	'electric': 'background: linear-gradient(45deg, #D0B14E 0%, #CDBC36 100%);',
-	'ground': '',
-	'fairy': '',
-	'fighting': '',
+	'ground': 'background: linear-gradient(45deg, #884E3A 0%, #EAB15D 100%);',
+	'fairy': 'background: linear-gradient(45deg, #F0166D 0%, #F09CB3 100%);',
+	'fighting': 'background: linear-gradient(45deg, #884E3A 0%, #EAB15D 100%);',
 	'psychic': 'background: linear-gradient(45deg, #533799 0%, #A573C6 100%);',
-	'rock': '',
+	'rock': 'background: linear-gradient(45deg, #884E3A 0%, #EAB15D 100%);',
 	'steel': 'background: linear-gradient(45deg, #5B7490 0%, #BACFF0 100%);',
 	'ice': 'background: linear-gradient(45deg, #0CA5DF 0%, #A4DBF7 100%);',
-	'ghost': '',
-	'dragon': ''
+	'ghost': 'background: linear-gradient(45deg, #202928 0%, #3C7B7C 100%);',
+	'dragon': 'background: linear-gradient(45deg, #202928 0%, #3C7B7C 100%);'
 };

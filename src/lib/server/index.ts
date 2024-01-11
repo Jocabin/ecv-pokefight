@@ -1,4 +1,4 @@
-import type { Warrior } from "$lib/types";
+import type { MatchResults, Warrior } from '$lib/types';
 import { readFileSync, writeFileSync } from "fs";
 
 const bagFilePath = "generated/warriors.json";
@@ -21,6 +21,25 @@ export function getAllWarriors(): Warrior[] {
 	} catch (error) {
 		return [];
 	}
+}
+
+export function updateWarriorScore(results: MatchResults) {
+	const winnerScore = 3
+	const looserScore = 0
+	const drawScore = 1
+
+	const winner = warriors.find(warrior => warrior.uuid === results.winner.uuid)
+	const looser = warriors.find(warrior => warrior.uuid === results.looser.uuid)
+
+	if (!results.draw) {
+		winner.points += winnerScore
+		looser.points += looserScore
+	} else {
+		winner.points = drawScore
+		looser.points = drawScore
+	}
+
+	saveBDD()
 }
 
 export function saveBDD() {

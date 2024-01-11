@@ -9,15 +9,15 @@
 
 <nav class="flex justify-between items-center bg-green-950 text-white p-4">
 	<div class="flex justify-center items-center gap-8 font-bold text-xl">
-		<a href="/" class="bg-red-700 p-2 rounded">Combatre</a>
-		<a href="/create-char">Créer un combatant</a>
-		<a href="/warriors">Classement</a>
+		<a href="/">Combatre  ⚔️</a>
+		<a href="/create-char">Créer un combatant 🥊</a>
+		<a href="/warriors">Classement 🏅</a>
 	</div>
 
 	{#if champion}
 		{@const src = allPokemons[champion.id - 1].sprites.front_default}
 
-		<div class="bg-gray-200 text-black p-4 rounded-2xl flex flex-col items-center justify-center">
+		<div class="bg-gray-200 text-black px-4 rounded-2xl flex flex-col items-center justify-center">
 			<div class="flex justify-start items-center gap-4">
 				<img {src} alt="">
 
@@ -39,6 +39,13 @@
 
 <style>
     a:hover {
-        text-decoration: underline;
+        background: indianred;
     }
+
+		a {
+				background: white;
+				color: black;
+				padding: 8px;
+				border-radius: 4px;
+		}
 </style>

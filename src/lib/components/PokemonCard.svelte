@@ -6,10 +6,10 @@
 
 	export let pokemon: Warrior;
 	export let src: string;
-	export let type;
+	export let type: string;
 	export let isChampion = false;
 
-	const { name, points, force, pv } = pokemon;
+	$:({ name: pokeName, points, force, pv } = pokemon);
 </script>
 
 <Tilt>
@@ -19,8 +19,9 @@
 				{#if isChampion}
 							<img width="25" class="ml-auto" src={Trophee} alt="">
 				{/if}
-				<span>{name}</span>
+				<span>{pokeName}</span>
 			</span>
+
 			<span class="font-bold"><span class="text-[10px] ">PV</span>{pv}</span>
 		</div>
 
@@ -30,7 +31,6 @@
 			<span>Pts: {points}</span>
 			<span>Atk: {force}</span>
 		</div>
-
 	</div>
 </Tilt>
 
